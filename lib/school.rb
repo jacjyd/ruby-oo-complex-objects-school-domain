@@ -10,9 +10,7 @@ class School
     end 
 
     def add_student (name, grade_num)
-        if !roster[grade_num] 
-            roster[grade_num] = []
-        end
+        roster[grade_num] ||= []
         roster[grade_num] << name
     end     
 
